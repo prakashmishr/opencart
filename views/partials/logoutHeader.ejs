@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open Cart</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- OWL Car -->
+    <link rel="stylesheet" href="/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="/css/owl.theme.default.min.css">
+    <!-- Showmore css -->
+    <link rel="stylesheet" href="/css/showMoreItems-theme.min.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <!-- Theme CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+
+
+
+
+
+    <header class="cstm-header">
+        <!-- Logout Modal -->
+        <div class="modal fade" id="logout">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header bg-dark text-light">
+                        <h5 class="modal-title">Do You Really Want to Leave?</h5>
+                        <button type="button" class="close text-white" data-dismiss="modal">&times;</button>
+                    </div>
+                    <!-- <div class="modal-body">
+                <h5>Press Logout to leave</h5>
+            </div> -->
+                    <div class="modal-footer bg-dark">
+                        <!-- <button type="button" class="btn btn-light">Stay Here</button> -->
+                        <a href="/logout"><button type="button" class="btn btn-danger">Logout</button> </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Logout Modal Ends -->
+        <!-- Payment Modal Start -->
+        <div class="modal fade" id="payment" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="payment">Enter Card Details</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="close"><span
+                                aria-hidden="true">&times;</span></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="accepted-card d-flex justify-content-between align-items-center">
+                                        <p class="mb-0">Accepted Cards</p>
+                                        <div class="cards-icon d-flex justify-content-center align-items-center">
+                                            <img src="/img/visa.png" alt="visa" width="30px" class="img-fluid mx-1">
+                                            <img src="/img/master.png" alt="master" width="30px" class="img-fluid mx-1">
+                                            <img src="/img/paypal.png" alt="paypal" width="30px" class="img-fluid mx-1">
+                                        </div>
+                                    </div>
+                                    <form action="">
+                                        <div class="form-group">
+                                            <label for="cardname">Name on Card:</label>
+                                            <input type="text" class="form-control" id="cardname">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="cardnumber">Card Number:</label>
+                                            <input type="text" class="form-control" id="cardnumber">
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="form-group col-md-4">
+                                                <label for="cvc">CVC</label>
+                                                <input type="text" class="form-control" id="cvc" placeholder="ex: 311">
+                                            </div>
+                                            <div class="form-group col-md-4">
+                                                <label for="expdate">Expiration Month:</label>
+                                                <input type="text" class="form-control" id="expdate" placeholder="MM">
+                                            </div>
+                                            <div class="form-group col-md-4">
+                                                <label for="expyear">Expiration Year:</label>
+                                                <input type="text" class="form-control" id="expyear" placeholder="YYYY">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <button type="submit" class="btn btn-block btn-dark">Pay Now</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Payment Modal End -->
+        <div class="container-fluid">
+            <!-- Navigation bar -->
+            <div class="row">
+                <div class="col-12">
+                    <nav class="navbar navbar-expand-lg navbar-dark cstm-header">
+                        <a class="navbar-brand" href="/">
+                            <!-- <img src="/img/logo.png" width="200px" class="img-fluid" alt="logo"> -->
+                        <h3>OpenCart</h3>
+                        </a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse"
+                            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav mr-auto">
+                                <li class="nav-item">
+                                    <a class="nav-link mx-2" href="/">Home <span class="sr-only">(current)</span></a>
+                                </li>
+                                <li class="nav-item  active">
+                                    <a class="nav-link mx-2" href="/user/cart">Order</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link mx-2" href="/admin/dashboard">Dashboard</a>
+                                </li>
+                            </ul>
+
+                            <p class="btn btn-secondary userName"><i class="fa fa-user"></i> <%= name %> </p>
+
+                            <button class="btn btn-outline-light mx-2" data-toggle="modal" data-target="#logout"><i
+                                    class="fa fa-sign-out" aria-hidden="true"></i>Logout</button>
+                            <a href="/user/cart"> <button class="btn btn-light my-2 my-sm-0" type="submit"><i
+                                        class="fa fa-shopping-cart"></i>
+                                    Cart <span id="numberOfProduct"> 2</span></button>
+                            </a>
+
+                        </div>
+                    </nav>
+                </div>
+            </div> <!-- Navigation bar end -->
+        </div>
+    </header>

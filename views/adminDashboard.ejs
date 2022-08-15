@@ -1,0 +1,219 @@
+<%- include('adminPartials/header.ejs') %>
+
+
+    <!-- Cards -->
+    <section>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-10 col-md-8 ml-auto">
+                    <div class="row pt-md-5 mt-md-3 mb-5">
+                        <div class="col-sm-6 col-xl-3 p-2">
+                            <div class="card cstm-card">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between">
+                                        <i class="fa fa-shopping-cart fa-4x text-danger"></i>
+                                        <div class="text-right text-secondary">
+                                            <h5>Sales</h5>
+                                            <h3>$135,000</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer text-secondary">
+                                    <i class="fa fa-refresh mr-3"></i>
+                                    <span>Update Now</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-xl-3 p-2">
+                            <div class="card cstm-card">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between">
+                                        <i class="fa fa-money fa-4x text-success"></i>
+                                        <div class="text-right text-secondary">
+                                            <h5>Expenses</h5>
+                                            <h3>$40,000</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer text-secondary">
+                                    <i class="fa fa-refresh mr-3"></i>
+                                    <span>Update Now</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-xl-3 p-2">
+                            <div class="card cstm-card">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between">
+                                        <i class="fa fa-users fa-4x text-info"></i>
+                                        <div class="text-right text-secondary">
+                                            <h5>Users</h5>
+                                            <h3>10,000</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer text-secondary">
+                                    <i class="fa fa-refresh mr-3"></i>
+                                    <span>Update Now</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-xl-3 p-2">
+                            <div class="card cstm-card">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between">
+                                        <i class="fa fa-line-chart fa-4x text-danger"></i>
+                                        <div class="text-right text-secondary">
+                                            <h5>Visitors</h5>
+                                            <h3>20,000</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer text-secondary">
+                                    <i class="fa fa-refresh mr-3"></i>
+                                    <span>Update Now</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Cards Ends -->
+
+    <!-- Table Start -->
+    <section>
+        <div class="container-fluid">
+            <div class="row mb-5">
+                <div class="col-lg-10 col-md-8 ml-auto">
+                    <div class="row align-items-center">
+                        <!-- First Table -->
+                        <div class="col-12 col-xl-6 mb-4 mb-xl-0">
+                            <h4 class="text-muted text-center mb-3">All Orders</h4>
+                            <table class="table bg-light table-hover table-striped  text-center display" id="allorders">
+                                <thead>
+                                    <tr class="text-muted">
+                                        <th>#SL</th>
+                                        <th>Order No.</th>
+                                        <th>Product Name</th>
+                                        <th>Price</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th>1</th>
+                                        <td>pr001</td>
+                                        <td>Black Shoe</td>
+                                        <td>$99</td>
+                                        <td><span class="badge badge-success w-60 py-2">Completed</span></td>
+                                    </tr>
+                                    <tr>
+                                        <th>2</th>
+                                        <td>pr002</td>
+                                        <td>Black Shoe</td>
+                                        <td>$99</td>
+                                        <td><span class="badge badge-success w-60 py-2">Completed</span></td>
+                                    </tr>
+                                    <tr>
+                                        <th>3</th>
+                                        <td>pr003</td>
+                                        <td>Black Shoe</td>
+                                        <td>$99</td>
+                                        <td><span class="badge badge-success w-60 py-2">Completed</span></td>
+                                    </tr>
+                                    <tr>
+                                        <th>4</th>
+                                        <td>pr004</td>
+                                        <td>Black Shoe</td>
+                                        <td>$99</td>
+                                        <td><span class="badge badge-success w-60 py-2">Completed</span></td>
+                                    </tr>
+                                    <tr>
+                                        <th>5</th>
+                                        <td>pr005</td>
+                                        <td>Black Shoe</td>
+                                        <td>$99</td>
+                                        <td><span class="badge badge-success w-60 py-2">Completed</span></td>
+                                    </tr>
+                                    <tr>
+                                        <th>6</th>
+                                        <td>pr006</td>
+                                        <td>Black Shoe</td>
+                                        <td>$99</td>
+                                        <td><span class="badge badge-success w-60 py-2">Completed</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                        </div>
+                        <!-- Second Table -->
+                        <div class="col-12 col-xl-6">
+                            <h4 class="text-muted text-center mb-3">Recent Orders</h4>
+                            <table class="table table-hover bg-light table-striped text-center display"
+                                id="recentorders">
+                                <thead>
+                                    <tr class="text-muted">
+                                        <th>#SL</th>
+                                        <th>Order No.</th>
+                                        <th>Product Name</th>
+                                        <th>Price</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th>1</th>
+                                        <td>pr009</td>
+                                        <td>Black Shoe</td>
+                                        <td>$99</td>
+                                        <td><button type="button" class="btn btn-success btn-sm">Approved</button></td>
+                                    </tr>
+                                    <tr>
+                                        <th>2</th>
+                                        <td>pr0010</td>
+                                        <td>Black Shoe</td>
+                                        <td>$99</td>
+                                        <td><button type="button" class="btn btn-danger btn-sm">Pending</button></td>
+                                    </tr>
+                                    <tr>
+                                        <th>3</th>
+                                        <td>pr0011</td>
+                                        <td>Black Shoe</td>
+                                        <td>$99</td>
+                                        <td><button type="button" class="btn btn-danger btn-sm">Pending</button></td>
+                                    </tr>
+                                    <tr>
+                                        <th>4</th>
+                                        <td>pr0012</td>
+                                        <td>Black Shoe</td>
+                                        <td>$99</td>
+                                        <td><button type="button" class="btn btn-success btn-sm">Approved</button></td>
+                                    </tr>
+                                    <tr>
+                                        <th>5</th>
+                                        <td>pr0013</td>
+                                        <td>Black Shoe</td>
+                                        <td>$99</td>
+                                        <td><button type="button" class="btn btn-danger btn-sm">Pending</button></td>
+                                    </tr>
+                                    <tr>
+                                        <th>6</th>
+                                        <td>pr0014</td>
+                                        <td>Black Shoe</td>
+                                        <td>$99</td>
+                                        <td><button type="button" class="btn btn-success btn-sm">Approved</button></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Table End -->
+
+    <%- include('adminPartials/footer.ejs') %>

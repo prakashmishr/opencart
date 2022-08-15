@@ -1,0 +1,141 @@
+<%- include('partials/loginheader.ejs') %>
+
+    <% if(msg){%> 
+       <h2 class="msg btn-<%-symbol%> "> <%= msg %> </h2> 
+        <% } %> 
+    <!-- SignUp Form Start -->
+    <section>
+        <div class="col-12 col-md-10 col-lg-6 mx-auto mt-5 p-3 mb-5">
+            <div class="card shadow-lg">
+                <div class="card-body">
+                    <div class="card-title">
+                        <h4 class="text-center">Create Your Account</h4>
+                        <hr>
+                    </div>
+                    <form action="/user/signup" method="POST" data-toggle="validator" id="form" enctype="multipart/form-data" onsubmit="return validation()">
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="firstname"> <span class="text-danger align-middle">* </span>First
+                                    Name:</label>
+                                <input type="text" class="form-control" id="firstname" name="fName" placeholder="First Name"
+                                    autocomplete="off">
+                                <div class="invalid-feedback">
+                                    First Character Must be Capital and minimum 3 Characters.
+                                </div>
+                                <div class="valid-feedback">
+                                    First Name Format is Valid.
+                                </div>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="lastname"><span class="text-danger align-middle">* </span>Last Name:</label>
+                                <input type="text" class="form-control" name="lName" id="lastname" placeholder="Last Name"
+                                    autocomplete="off">
+                                <div class="invalid-feedback">
+                                    First Character Must be Capital and minimum 3 Characters.
+                                </div>
+                                <div class="valid-feedback">
+                                    Last Name Format is Valid.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email"><span class="text-danger align-middle">* </span>Email:</label>
+                            <input type="email" class="form-control" name="email" id="email" placeholder="Enter Email Address"
+                                autocomplete="off">
+                            <div class="invalid-feedback">
+                                Incorrect Email format.
+                            </div>
+                            <div class="valid-feedback">
+                                Email Looks Good.
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone"><span class="text-danger align-middle">* </span>Mobile:</label>
+                            <input type="tel" class="form-control" name="mobileNo" id="phone" placeholder="Enter Mobile Number"
+                                autocomplete="off">
+                            <div class="invalid-feedback">
+                                Must Begin with + and have 10
+                            </div>
+                            <div class="valid-feedback">
+                                Phone Number Looks Good.
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <legend class="col-form-label"><span class="text-danger align-middle">* </span>Gender:
+                                </legend>
+                                <div class="custom-control custom-radio">
+                                    <input type="radio" id="Male" value="0" name="customRadio" class="custom-control-input"
+                                        required autocomplete="off">
+                                    <label class="custom-control-label" for="Male">Male</label>
+                                </div>
+                                <div class="custom-control custom-radio">
+                                    <input type="radio" value="1" id="female" name="customRadio" class="custom-control-input"
+                                        required autocomplete="off">
+                                    <label class="custom-control-label" for="female">Female</label>
+                                </div>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="example-date-input" class="col-form-label"><span
+                                        class="text-danger align-middle">* </span>Profile Picture:</label>
+                                <input class="form-control" name="profilePic" type="file" id="example-date-input" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="district"><span class="text-danger align-middle">* </span>District:</label>
+                                <input type="text" class="form-control" name="dist" id="district" placeholder="District"
+                                    autocomplete="off">
+                                <div class="invalid-feedback">
+                                    District Name at least 3 Character.
+                                </div>
+                                <div class="valid-feedback">
+                                    District Name Looks Good.
+                                </div>
+                            </div>
+                            <div class="form-group col">
+                                <label for="city"><span class="text-danger align-middle">* </span>City:</label>
+                                <input type="text" class="form-control" name="city" id="city" placeholder="City" autocomplete="off">
+                                <div class="invalid-feedback">
+                                    City Name at least 3 Character.
+                                </div>
+                                <div class="valid-feedback">
+                                    City Name Looks Good.
+                                </div>
+                            </div>
+                            <div class="form-group col">
+                                <label for="zip"><span class="text-danger align-middle">* </span>Zip:</label>
+                                <input type="text" class="form-control" name="zip" id="zip" placeholder="Zip" autocomplete="off">
+                                <div class="invalid-feedback">
+                                    Zip must have 6 number.
+                                </div>
+                                <div class="valid-feedback">
+                                    Zip Number Looks Good.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="password"><span class="text-danger align-middle">* </span>Password:</label>
+                            <input type="password" class="form-control" name="pswd" id="pw1" placeholder="Enter Your Password"
+                                autocomplete="off">
+                            <div class="invalid-feedback">
+                                Minimum 8 characters max 16 chars at least 1 Uppercase Alphabet, 1 Lowercase Alphabet, 1
+                                Number and 1 Special Character
+                            </div>
+                            <div class="valid-feedback">
+                                Password Number Looks Good.
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-dark d-block mx-auto">Sign up</button>
+
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- SignUp Form End -->
+
+    
+<%- include('partials/footer.ejs') %>
+   

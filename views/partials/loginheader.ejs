@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open Cart</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- OWL Car -->
+    <link rel="stylesheet" href="/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="/css/owl.theme.default.min.css">
+    <!-- Showmore css -->
+    <link rel="stylesheet" href="/css/showMoreItems-theme.min.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <!-- Theme CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <header class="cstm-header">
+        <!-- Sign In Modal -->
+        <div class="modal fade" id="login" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header bg-dark text-light">
+                        <h5 class="modal-title" id="exampleModalLabel">Sign In</h5>
+                        <button type="button" class="close text-light" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form action="/user/login" method="POST">
+
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Email address</label>
+                                <input name="email" type="email" class="form-control" id="exampleInputEmail1"
+                                    aria-describedby="emailHelp">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Password</label>
+                                <input name="pwd" type="password" class="form-control" id="exampleInputPassword1">
+                            </div>
+                            <button type="submit" class="btn btn-dark">Submit</button>
+                        </form>
+                    </div>
+                    <div class="modal-footer bg-dark text-light">
+                        <h5 class="d-block">Don't have an account?</h5>
+                        <a href="/user/signup"> <button type="button" class="btn btn-sm bg-light">Create
+                                Now</button></a>
+                    </div>
+                    <div class="modal-footer bg-dark text-light">
+                        <a href="/user/forgot/password">
+                            <h5 class="d-block">forgot password?</h5>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <!-- Navigation bar -->
+            <div class="row">
+                <div class="col-12">
+                    <nav class="navbar navbar-expand-lg navbar-dark cstm-header">
+                        <a class="navbar-brand" href="/">
+                            <!-- <img src="" width="200px" class="img-fluid" alt="logo"> -->
+                            <h3>OpenCart</h3>
+                            </a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse"
+                            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav mr-auto">
+                                <li class="nav-item active">
+                                    <a class="nav-link mx-2" href="/">Home <span class="sr-only">(current)</span></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link mx-2" href="/user/cart">Order</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link mx-2" href="/admin/dashboard">Dashboard</a>
+                                </li>
+                            </ul>
+                            <button class="btn btn-outline-light mx-2" data-toggle="modal"
+                                data-target="#login">Login</button>
+                            <a href="/user/signup"><button class="btn btn-outline-light mx-2">Sign Up</button></a>
+
+                            <a href="/user/cart"> <button class="btn btn-light my-2 my-sm-0" type="submit"><i
+                                        class="fa fa-shopping-cart"></i>
+                                    Cart <span id="numberOfProduct"> 2</span></button>
+                            </a>
+
+                        </div>
+                    </nav>
+                </div>
+            </div>
+            <!-- Navigation bar end -->
+        </div>
+    </header>
