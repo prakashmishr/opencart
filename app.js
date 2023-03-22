@@ -7,6 +7,7 @@ const dbConnection = require('./database/index');
 // router connection
 const routerInit = require('./entities/router');
 
+const PORT = process.env.PORT || 3000
 
 const app = express();
 
@@ -46,7 +47,7 @@ dbConnection().then(() => {
 
     console.log("db is connected");
 
-    app.listen(3000, () => {
+    app.listen(PORT, () => {
 
         console.log("app is listning @ port 3000");
     })
